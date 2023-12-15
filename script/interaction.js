@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let currentMarkers = [];
 
   // Fetch GeoJSON data
-  fetch('Data/merged_df.geojson')
+  fetch('./Data/merged_df.geojson')
     .then((response) => response.json())
     .then((data) => {
       geojson = data;
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let customMarkerElement = document.createElement('div');
             customMarkerElement.className = 'map-marker'; 
             customMarkerElement.style.backgroundImage =
-              'url(png/icon5-removebg-preview.png)';
+              'url(./png/icon5-removebg-preview.png)';
             customMarkerElement.style.width = '50px'; 
             customMarkerElement.style.height = '50px'; 
             return customMarkerElement;

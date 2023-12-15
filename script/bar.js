@@ -1,5 +1,5 @@
 // banned book analysis bar chart (state count)
-d3.csv('Data/state_counts.csv').then(function (data) {
+d3.csv('./Data/state_counts.csv').then(function (data) {
   data.forEach(function (d) {
     d.Count = +d.Count;
     console.log(d.Count);

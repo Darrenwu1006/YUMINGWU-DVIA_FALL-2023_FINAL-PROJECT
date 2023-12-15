@@ -41,7 +41,7 @@ map.on('load', function () {
   //Election_by_state (GeoJSON)
   map.addSource('electionData', {
     type: 'geojson',
-    data: 'Data/election.geojson',
+    data: './Data/election.geojson',
   });
   // console.log(map.getSource('electionData'));
 
@@ -80,7 +80,7 @@ map.on('load', function () {
   //Banned Books Map (GeoJSON)
   map.addSource('multipolygons', {
     type: 'geojson',
-    data: 'Data/merged_df.geojson',
+    data: './Data/merged_df.geojson',
   });
 
   map.addLayer({

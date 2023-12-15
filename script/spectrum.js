@@ -5,7 +5,7 @@ const rep = document.getElementById('rep');
 let flag = false;
 let container;
 document.addEventListener('DOMContentLoaded', function () {
-  fetch('Data/bannedbook_list.csv')
+  fetch('./Data/bannedbook_list.csv')
     .then((response) => response.text())
     .then((data) => processData(data))
     .then((books) => {
