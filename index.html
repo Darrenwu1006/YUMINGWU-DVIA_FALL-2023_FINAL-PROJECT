@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Banned Books Uncovered: Insights into American School Censorship</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//unpkg.com/d3"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/nls8ajo.css">
+
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+      <div class="pageLoading">
+        <div class="loading"></div>
+        <div class="bar"></div>
+      </div>
+
+    <div class="page" id="page1">
+      <button onclick="transitionToPage('page2')" id="scrollButton"></button>
+    <div class="title" id="mainTitle">
+      <span>B</span><span>A</span><span>N</span><span>N</span><span>E</span><span>D</span>
+      <br>
+      <span>B</span><span>O</span><span>O</span><span>K</span><span>S</span>
+      <br>
+      U<span>N</span><span>C</span><span>O</span><span>V</span><span>E</span><span>R</span><span>E</span><span>D</span>
+    </div>
+
+      <div class="title" id = "subTitle">Insights into American School Censorship</div>
+      <div class="title" id = "author">Designed by YuMingWu</div>
+      <div class="container" id= "dem"></div>
+      <div class="container" id= "both"></div>
+      <div class="container" id= "rep"></div>
+    </div>
+    <div class="page" id="page2">
+    <div id="map"> 
+      <div id="district-name"></div>
+      <div id="election"></div>
+    </div> 
+      <button onclick="transitionToPage('page1')" id="scrollBackButton">SPECTRUM</button>
+      <button id="toggleButton">ELECTION_DATA</button>
+      <div id="map-controls">
+        <button id="zoomInButton">+</button>
+        <button id="zoomOutButton">-</button>
+        <button id="resetZoomButton">[ ]</button>  
+      </div>
+      <div id="legend_election"></div>
+      <div id="legend_book"></div>
+      <div id="chart-container"></div> 
+      <div id="book-container">
+        <img class="bookTitle" id="GenderQueerAMemoir" alt="Gender Queer: A Memoir" src="https://m.media-amazon.com/images/I/710X8PsQxaL._SY522_.jpg" onclick="handleClick('this')" />
+        <img class="bookTitle" id="LawnBoy" alt="Lawn Boy" src="https://m.media-amazon.com/images/I/91QUhsZbAwL._SY522_.jpg" onclick="handleClick('this')" />
+        <img class="bookTitle" id="AllBoysArentBlue" alt="All Boys Aren't Blue" src="https://m.media-amazon.com/images/I/51xIPFd8M7L._SY445_SX342_.jpg" onclick="handleClick('this')" />
+        <img class="bookTitle" id="OutofDarkness" alt="Out of Darkness" src="https://m.media-amazon.com/images/I/81JTjun3okL._SY522_.jpg" onclick="handleClick('this')" />
+        <img class="bookTitle" id="TheBluestEye" alt="The Bluest Eye" src="https://m.media-amazon.com/images/I/71mq8UbZyXL._SY522_.jpg" onclick="handleClick('this')" />
+        <img class="bookTitle" id="TheHateUGive" alt="The Hate U Give" src="https://m.media-amazon.com/images/I/41hSIe9NQ7L._SY445_SX342_.jpg" onclick="handleClick('this')" />
+        <img class="bookTitle" id="TheAbsolutelyTrueDiaryofaPartTimeIndian" alt="The Absolutely True Diary of a Part-Time Indian" src="https://m.media-amazon.com/images/I/71Tbq4LrGGL._SY522_.jpg" onclick="handleClick('this')" />
+        <img class="bookTitle" id="MeandEarlandtheDyingGirl" alt="Me and Earl and the Dying Girl" src="https://m.media-amazon.com/images/I/61v8HVBeC2L._SY522_.jpg" onclick="handleClick('this')" />
+        <img class="bookTitle" id="TheKiteRunner" alt="The Kite Runner" src="https://m.media-amazon.com/images/I/518-tcTo9CL._SY445_SX342_.jpg" onclick="handleClick('this')" />
+        <img class="bookTitle" id="Beyond Magenta: Transgender Teens Speak Out" alt="Beyond Magenta: Transgender Teens Speak Out" src="https://m.media-amazon.com/images/I/91tVk59mbBL._SY522_.jpg" onclick="handleClick('this')" />
+        <img class="bookTitle" id="ThirteenReasonsWhy" alt="Thirteen Reasons Why" src="https://m.media-amazon.com/images/I/8174dqojKcL._SY522_.jpg" onclick="handleClick('this')" />
+        <img class="bookTitle" id="l8rg8r" alt="l8r, g8r" src="https://m.media-amazon.com/images/I/61w-8BChwWL._SY522_.jpg" onclick="handleClick('this')" />
+      </div>
+    </div>
+    <script src="script/spectrum.js"></script>
+    <script src="script/map.js"></script>
+    <script src="script/transition.js"></script>
+    <script src="script/interaction.js"></script>
+    <script src="script/bar.js"></script>
+  </body>
+</html>
